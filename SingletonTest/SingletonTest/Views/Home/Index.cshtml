@@ -1,0 +1,21 @@
+﻿@model SingletonTest.Models.HomeViewModel
+@{
+    ViewBag.Title = "Singleton Test";
+}
+
+<h2>Singleton Test</h2>
+
+@foreach (var item in @Model.ContentList)
+{
+    @item <br />
+}
+
+<br />
+<br />
+
+@using (Html.BeginForm("AddString", "Home"))
+{
+    <p>@Html.TextBox("stringToAdd")</p>
+
+    <p><input type="submit" value="Add String" /></p>
+}
